@@ -3,9 +3,6 @@ package no.scienta.yatzy.game;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import no.scienta.yatzy.Category;
-import no.scienta.yatzy.Hand;
-
 /**
  * @author Sindre Mehus
  */

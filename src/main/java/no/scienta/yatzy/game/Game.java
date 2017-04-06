@@ -6,8 +6,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import no.scienta.yatzy.Category;
-import no.scienta.yatzy.Hand;
 import no.scienta.yatzy.die.Die;
 import no.scienta.yatzy.die.DieValueGenerator;
 import no.scienta.yatzy.die.RandomDieValueGenerator;
@@ -18,9 +16,14 @@ import no.scienta.yatzy.die.RandomDieValueGenerator;
 public class Game {
 
     private final Map<Player, PlayerScores> scores = new LinkedHashMap<>();
-    private final DieValueGenerator dieValueGenerator = new RandomDieValueGenerator();
+    private final DieValueGenerator dieValueGenerator;
 
     public Game(List<Player> players) {
+        this(players, new RandomDieValueGenerator());
+    }
+
+    public Game(List<Player> players, DieValueGenerator dieValueGenerator) {
+        this.dieValueGenerator = dieValueGenerator;
         players.forEach(player -> scores.put(player, new PlayerScores(player)));
     }
 

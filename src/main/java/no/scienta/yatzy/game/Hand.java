@@ -1,4 +1,4 @@
-package no.scienta.yatzy;
+package no.scienta.yatzy.game;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,12 +17,12 @@ public class Hand {
 
     private final List<Die> dice;
 
-    public Hand(List<Die> dice) {
+    Hand(List<Die> dice) {
         this.dice = dice;
     }
 
     public static Hand random(DieValueGenerator generator) {
-        List<Die> dice = new ArrayList<Die>();
+        List<Die> dice = new ArrayList<>();
         for (int i = 0; i < DICE_COUNT; i++) {
             dice.add(Die.random(generator));
         }
@@ -33,7 +33,16 @@ public class Hand {
         return Collections.unmodifiableList(dice);
     }
 
+    public Die getDie(int index) {
+        return dice.get(index);
+    }
+
     public List<Die.Value> getDiceValues() {
         return dice.stream().map(Die::getValue).collect(Collectors.toList());
+    }
+
+    @Override
+    public String toString() {
+        return dice.stream().map(Die::toString).collect(Collectors.joining(" "));
     }
 }

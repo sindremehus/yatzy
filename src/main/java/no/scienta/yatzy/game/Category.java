@@ -1,10 +1,10 @@
-package no.scienta.yatzy;
+package no.scienta.yatzy.game;
 
 import no.scienta.yatzy.die.Die;
 import no.scienta.yatzy.rules.ChanceRule;
 import no.scienta.yatzy.rules.EqualsRule;
 import no.scienta.yatzy.rules.LargeStraightRule;
-import no.scienta.yatzy.rules.NOfAKindRule;
+import no.scienta.yatzy.rules.NMOfAKindRule;
 import no.scienta.yatzy.rules.Rule;
 import no.scienta.yatzy.rules.SmallStraightRule;
 import no.scienta.yatzy.rules.YatzyRule;
@@ -20,12 +20,14 @@ public enum Category {
     FIVES(new EqualsRule(Die.Value.FIVE)),
     SIXES(new EqualsRule(Die.Value.SIX)),
 
-    ONE_PAIR(new NOfAKindRule(2)),
-    THREE_OF_A_KIND(new NOfAKindRule(3)),
-    FOUR_OF_A_KIND(new NOfAKindRule(4)),
-    CHANCE(new ChanceRule()),
+    ONE_PAIR(new NMOfAKindRule(2)),
+    TWO_PAIRS(new NMOfAKindRule(2, 2)),
+    THREE_OF_A_KIND(new NMOfAKindRule(3)),
+    FOUR_OF_A_KIND(new NMOfAKindRule(4)),
     SMALL_STRAIGHT(new SmallStraightRule()),
     LARGE_STRAIGHT(new LargeStraightRule()),
+    FULL_HOUSE(new NMOfAKindRule(3, 2)),
+    CHANCE(new ChanceRule()),
     YATZY(new YatzyRule()),;
 
     private final Rule rule;

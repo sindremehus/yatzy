@@ -22,6 +22,11 @@ public class Die {
         return value;
     }
 
+    @Override
+    public String toString() {
+        return value.toString();
+    }
+
     public enum Value {
 
         ONE(1),
@@ -41,6 +46,11 @@ public class Die {
 
         public int getValue() {
             return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
         }
     }
 }

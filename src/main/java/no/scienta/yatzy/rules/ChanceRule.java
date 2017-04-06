@@ -1,6 +1,6 @@
 package no.scienta.yatzy.rules;
 
-import no.scienta.yatzy.Hand;
+import no.scienta.yatzy.game.Hand;
 
 /**
  * @author Sindre Mehus

@@ -3,8 +3,8 @@ package no.scienta.yatzy.rules;
 import java.util.Arrays;
 import java.util.List;
 
-import no.scienta.yatzy.Hand;
 import no.scienta.yatzy.die.Die;
+import no.scienta.yatzy.game.Hand;
 
 import static no.scienta.yatzy.die.Die.Value.*;
 
