@@ -9,6 +9,10 @@ import no.scienta.yatzy.die.Die;
 import no.scienta.yatzy.die.DieValueGenerator;
 
 /**
+ * A "hand" of five dice.
+ * <p>
+ * This class is immutable.
+ *
  * @author Sindre Mehus
  */
 public class Hand {

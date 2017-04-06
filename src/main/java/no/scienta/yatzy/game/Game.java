@@ -11,6 +11,10 @@ import no.scienta.yatzy.die.DieValueGenerator;
 import no.scienta.yatzy.die.RandomDieValueGenerator;
 
 /**
+ * A Yatzy game with a number of players.
+ * <p>
+ * A client of the Yatzy library only needs to use this class.
+ *
  * @author Sindre Mehus
  */
 public class Game {

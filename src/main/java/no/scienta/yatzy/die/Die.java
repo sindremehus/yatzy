@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * A die with a given face value.
+ * <p>
+ * This class is immutable.
+ *
  * @author Sindre Mehus
  */
 public class Die {
