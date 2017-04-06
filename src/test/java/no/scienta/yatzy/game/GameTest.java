@@ -24,7 +24,6 @@ public class GameTest {
         Player playerB = new Player("b");
         Game game = new Game(asList(playerA, playerB), generator);
 
-
         generator.add(ONE, THREE, FIVE, SIX, FOUR);
         Hand hand = game.randomHand();
         assertThat(hand.toString(), equalTo("1 3 5 6 4"));

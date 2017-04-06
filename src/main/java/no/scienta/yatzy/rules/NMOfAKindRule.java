@@ -4,6 +4,10 @@ import no.scienta.yatzy.die.Die;
 import no.scienta.yatzy.game.Hand;
 
 /**
+ * N dice of one kind, and M dice of another kind.
+ * <p>
+ * Generalization of one pair, two pairs, three of a kind, four of a kind, and full house.
+ *
  * @author Sindre Mehus
  */
 public class NMOfAKindRule extends Rule {
