@@ -16,10 +16,19 @@ public class PlayerScores {
     }
 
     public int sum() {
-        // TODO: Bonus
-        return scores.values().stream()
-                     .mapToInt(Integer::intValue)
-                     .sum();
+        int upperScores = scores.keySet().stream()
+                                .filter(Category::isUpperSection)
+                                .mapToInt(scores::get)
+                                .sum();
+
+        int lowerScores = scores.keySet().stream()
+                                .filter(Category::isLowerSection)
+                                .mapToInt(scores::get)
+                                .sum();
+
+        int bonus = upperScores >= 63 ? 50 : 0;
+
+        return upperScores + lowerScores + bonus;
     }
 
     public void registerScore(Hand hand, Category category) {
